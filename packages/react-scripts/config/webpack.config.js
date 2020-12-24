@@ -410,7 +410,8 @@ module.exports = function (webpackEnv) {
                   [
                     require.resolve('babel-preset-react-app'),
                     {
-                      runtime: hasJsxRuntime ? 'automatic' : 'classic',
+                      runtime: 'automatic',
+                      importSource: require.resolve('@emotion/react'),
                     },
                   ],
                 ],
@@ -435,6 +436,7 @@ module.exports = function (webpackEnv) {
                 ),
                 // @remove-on-eject-end
                 plugins: [
+                  require.resolve('@emotion/babel-plugin'),
                   [
                     require.resolve('babel-plugin-named-asset-import'),
                     {
@@ -767,6 +769,7 @@ module.exports = function (webpackEnv) {
               'react/react-in-jsx-scope': 'error',
             }),
           },
+          plugins: [require.resolve('@emotion/eslint-plugin')],
         },
       }),
     ].filter(Boolean),
