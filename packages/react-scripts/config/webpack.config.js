@@ -769,7 +769,7 @@ module.exports = function (webpackEnv) {
               'react/react-in-jsx-scope': 'error',
             }),
           },
-          plugins: [require.resolve('@emotion/eslint-plugin')],
+          plugins: ['@emotion'],
         },
       }),
     ].filter(Boolean),
