@@ -407,10 +407,13 @@ module.exports = function (webpackEnv) {
                   'babel-preset-react-app/webpack-overrides'
                 ),
                 presets: [
+                  require.resolve('@babel/preset-env'),
+                  require.resolve('@babel/preset-typescript'),
                   [
-                    require.resolve('babel-preset-react-app'),
+                    require.resolve('@babel/preset-react'),
                     {
-                      runtime: hasJsxRuntime ? 'automatic' : 'classic',
+                      runtime: 'automatic',
+                      importSource: '@emotion/react',
                     },
                   ],
                 ],
