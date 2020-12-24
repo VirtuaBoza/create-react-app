@@ -404,13 +404,11 @@ module.exports = function (webpackEnv) {
               loader: require.resolve('babel-loader'),
               options: {
                 customize: require.resolve(
-                  'babel-preset-react-app/webpack-overrides'
+                  '@abizzle/babel-preset-react-app/webpack-overrides'
                 ),
                 presets: [
-                  require.resolve('@babel/preset-env'),
-                  require.resolve('@babel/preset-typescript'),
                   [
-                    require.resolve('@babel/preset-react'),
+                    require.resolve('@abizzle/babel-preset-react-app'),
                     {
                       runtime: 'automatic',
                       importSource: '@emotion/react',
@@ -431,7 +429,7 @@ module.exports = function (webpackEnv) {
                     : isEnvDevelopment && 'development',
                   [
                     'babel-plugin-named-asset-import',
-                    'babel-preset-react-app',
+                    '@abizzle/babel-preset-react-app',
                     'react-dev-utils',
                     'react-scripts',
                   ]
@@ -475,7 +473,9 @@ module.exports = function (webpackEnv) {
                 compact: false,
                 presets: [
                   [
-                    require.resolve('babel-preset-react-app/dependencies'),
+                    require.resolve(
+                      '@abizzle/babel-preset-react-app/dependencies'
+                    ),
                     { helpers: true },
                   ],
                 ],
@@ -489,7 +489,7 @@ module.exports = function (webpackEnv) {
                     : isEnvDevelopment && 'development',
                   [
                     'babel-plugin-named-asset-import',
-                    'babel-preset-react-app',
+                    '@abizzle/babel-preset-react-app',
                     'react-dev-utils',
                     'react-scripts',
                   ]
