@@ -29,6 +29,9 @@
   "types": "./lib/react-app.d.ts",
   "dependencies": {
     "@babel/core": "7.12.3",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
     "@emotion/babel-plugin": "^11.1.2",
     "@emotion/eslint-plugin": "^11.0.0",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.2",
