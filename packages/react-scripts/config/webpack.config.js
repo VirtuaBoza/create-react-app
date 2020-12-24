@@ -410,8 +410,7 @@ module.exports = function (webpackEnv) {
                   [
                     require.resolve('babel-preset-react-app'),
                     {
-                      runtime: 'automatic',
-                      importSource: require.resolve('@emotion/react'),
+                      runtime: hasJsxRuntime ? 'automatic' : 'classic',
                     },
                   ],
                 ],
