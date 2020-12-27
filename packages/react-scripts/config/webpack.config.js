@@ -771,7 +771,6 @@ module.exports = function (webpackEnv) {
               'react/react-in-jsx-scope': 'error',
             }),
           },
-          plugins: ['@emotion'],
         },
       }),
     ].filter(Boolean),
